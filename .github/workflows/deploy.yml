@@ -24,11 +24,12 @@ jobs:
           fetch-depth: 0 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22W
       - uses: actions/checkout@master
         with:
           repository: juanca37/${{ secrets.OBSIDIAN_REPO }}
           ref: main
+          token: ${{ secrets.PAT }}
       - name: Debugging 
         run: ll ${{ secrets.OBSIDIAN_REPO }}
       - name: Copying blog content into folder
