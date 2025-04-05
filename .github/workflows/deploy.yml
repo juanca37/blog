@@ -30,6 +30,7 @@ jobs:
           repository: juanca37/${{ secrets.OBSIDIAN_REPO }}
           ref: main
           token: ${{ secrets.PAT }}
+          path: ${{ secrets.OBSIDIAN_REPO }}
       - name: Debugging 
         run: ls ${{ secrets.OBSIDIAN_REPO }}
       - name: Copying blog content into folder
