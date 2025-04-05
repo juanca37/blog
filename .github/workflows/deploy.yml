@@ -31,14 +31,10 @@ jobs:
           ref: main
           token: ${{ secrets.PAT }}
           path: ${{ secrets.OBSIDIAN_REPO }}
-      - name: Debugging 
-        run: ls ${{ secrets.OBSIDIAN_REPO }}
       - name: Copying blog content into folder
         run: |
           cp ${{ secrets.OBSIDIAN_REPO }}/${{ secrets.OBSIDIAN_BLOG_FOLDER }}/. content -r
-      - name: Debugging 
-        run: ls content
-      - name: Removing OBSIDIAN_REPO
+      - name: Removing folder
         run: rm -rf ${{ secrets.OBSIDIAN_REPO }}
       - name: Install Dependencies
         run: npm ci
