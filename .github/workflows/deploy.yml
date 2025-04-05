@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 0 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22W
+          node-version: 22
       - uses: actions/checkout@master
         with:
           repository: juanca37/${{ secrets.OBSIDIAN_REPO }}
